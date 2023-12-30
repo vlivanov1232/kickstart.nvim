@@ -5,6 +5,7 @@ https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4f
 ### Changes
 
 Added [go.nvim](https://github.com/ray-x/go.nvim) 
+
 Added hybrid line numbers
 
 Keymaps
