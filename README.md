@@ -2,6 +2,19 @@
 
 https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4fa-8a0d7b17cf7b
 
+### Changes
+
+Added [go.nvim](https://github.com/ray-x/go.nvim) 
+Added hybrid line numbers
+
+Keymaps
+
+vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', {noremap = true})
+vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', {noremap = true})
+vim.api.nvim_set_keymap('n', '<C-o>', '<C-o>zz', {noremap = true})
+vim.api.nvim_set_keymap('n', 'n', 'nzzzv', {noremap = true})
+vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', {noremap = true})
+
 ### Introduction
 
 A starting point for Neovim that is:
