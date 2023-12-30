@@ -9,11 +9,13 @@ Added hybrid line numbers
 
 Keymaps
 
+``` lua
 vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-o>', '<C-o>zz', {noremap = true})
 vim.api.nvim_set_keymap('n', 'n', 'nzzzv', {noremap = true})
 vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', {noremap = true})
+```
 
 ### Introduction
 
