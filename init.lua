@@ -267,7 +267,18 @@ require('lazy').setup({
     event = { "CmdlineEnter" },
     ft = { "go", 'gomod' },
     build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
-  }
+  },
+
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim"
+    },
+    config = function()
+      require("telescope").load_extension("lazygit")
+    end,
+  },
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -672,10 +683,11 @@ cmp.setup {
     { name = 'path' },
   },
 }
-vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', {noremap = true})
-vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', {noremap = true})
-vim.api.nvim_set_keymap('n', '<C-o>', '<C-o>zz', {noremap = true})
-vim.api.nvim_set_keymap('n', 'n', 'nzzzv', {noremap = true})
-vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', {noremap = true})
+vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-o>', '<C-o>zz', { noremap = true })
+vim.api.nvim_set_keymap('n', 'n', 'nzzzv', { noremap = true })
+vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>gg', ':LazyGit<CR>', {noremap = true, silent = true})
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

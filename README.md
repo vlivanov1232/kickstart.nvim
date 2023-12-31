@@ -6,6 +6,8 @@ https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4f
 
 Added [go.nvim](https://github.com/ray-x/go.nvim) 
 
+Added [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
+
 Added hybrid line numbers
 
 Keymaps
@@ -16,6 +18,7 @@ vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-o>', '<C-o>zz', {noremap = true})
 vim.api.nvim_set_keymap('n', 'n', 'nzzzv', {noremap = true})
 vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>gg', ':LazyGit<CR>', { noremap = true, silent = true })
 ```
 
 ### Introduction
