@@ -597,6 +597,22 @@ local servers = {
   -- tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
+  pylsp = {
+    settings = {
+      pylsp = {
+        plugins = {
+          isort = {
+            enabled = true },
+          rope_autoimport = {
+            enabled = true,
+            code_actions = { enabled = true },
+            completions = { enabled = true }
+          },
+        }
+      }
+    },
+  },
+
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
