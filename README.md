@@ -10,6 +10,8 @@ https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4f
 
 * Added hybrid line numbers
 
+* Added [telescope-live-grep-args.nvim](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
+
 Keymaps
 
 ``` lua
@@ -19,6 +21,7 @@ vim.api.nvim_set_keymap('n', '<C-o>', '<C-o>zz', {noremap = true})
 vim.api.nvim_set_keymap('n', 'n', 'nzzzv', {noremap = true})
 vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>gg', ':LazyGit<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>sa', ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>', {desc = '[S]earch with [A]rgs'})
 ```
 
 ### Introduction
