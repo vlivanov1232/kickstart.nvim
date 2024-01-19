@@ -218,7 +218,9 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
-    opts = {},
+    opts = {
+      
+    },
   },
 
   -- "gc" to comment visual regions/lines
@@ -347,6 +349,13 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+vim.o.cursorline = true
+
+vim.opt.list = true
+vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append "eol:↴"
+
 
 -- [[ Basic Keymaps ]]
 
@@ -719,5 +728,6 @@ vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>gg', ':LazyGit<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>sa', ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>',
   { desc = '[S]earch with [A]rgs' })
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
