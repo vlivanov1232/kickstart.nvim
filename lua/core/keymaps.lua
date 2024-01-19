@@ -26,3 +26,6 @@ keymap.set("n", "<leader>h6", function() require("harpoon.ui").nav_file(6) end, 
 keymap.set("n", "<leader>h7", function() require("harpoon.ui").nav_file(7) end, { desc = "[H]arpoon 7" })
 keymap.set("n", "<leader>h8", function() require("harpoon.ui").nav_file(8) end, { desc = "[H]arpoon 8" })
 keymap.set("n", "<leader>h9", function() require("harpoon.ui").nav_file(9) end, { desc = "[H]arpoon 9" })
+
+keymap.set("n", "<M-j>", ":m+1<CR>")
+keymap.set("n", "<M-k>", ":m-2<CR>")
