@@ -285,6 +285,12 @@ require('lazy').setup({
       require("telescope").load_extension("lazygit")
     end,
   },
+  {
+    'stevearc/oil.nvim',
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -711,6 +717,7 @@ vim.api.nvim_set_keymap('n', '<C-o>', '<C-o>zz', { noremap = true })
 vim.api.nvim_set_keymap('n', 'n', 'nzzzv', { noremap = true })
 vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>gg', ':LazyGit<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>sa', ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>', {desc = '[S]earch with [A]rgs'})
+vim.api.nvim_set_keymap('n', '<leader>sa', ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>',
+  { desc = '[S]earch with [A]rgs' })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
